@@ -1,7 +1,8 @@
 name: CI action schema
 
 on:
-  push: {}
+  push:
+    branches: [master, "release/*", "ci/try-reusable-workflows"]
   pull_request:
     branches: [master, "release/*"]
 

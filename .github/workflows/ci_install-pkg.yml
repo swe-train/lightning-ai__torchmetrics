@@ -2,7 +2,7 @@ name: Install pkg
 
 on:
   push:
-    branches: [master, "release/*"]
+    branches: [master, "release/*", "ci/try-reusable-workflows"]
   pull_request:
     branches: [master, "release/*"]
 
