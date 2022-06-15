@@ -1,6 +1,10 @@
 name: Check Docs
 
-on: [pull_request]
+on:
+  push:
+    branches: [master, "release/*", "ci/try-reusable-workflows"]
+  pull_request:
+    branches: [master, "release/*"]
 
 jobs:
   check:
