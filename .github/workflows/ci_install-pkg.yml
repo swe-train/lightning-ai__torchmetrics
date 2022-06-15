@@ -7,8 +7,8 @@ on:
     branches: [master, "release/*"]
 
 jobs:
-  install:
-    uses: PyTorchLightning/pytorch-lightning/.github/workflows/_check-install.yml@ci/define-reusable-workflows
+  check:
+    uses: PyTorchLightning/pytorch-lightning/.github/workflows/_check-package.yml@ci/define-reusable-workflows
     with:
       import-name: torchmetrics
       pypi-name: torchmetrics
