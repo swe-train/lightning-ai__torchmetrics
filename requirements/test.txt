@@ -7,6 +7,7 @@ pytest-timeout
 check-manifest
 phmdoctest>=1.1.1
 pre-commit>=1.0
+mypy==0.790
 
 psutil
 requests
