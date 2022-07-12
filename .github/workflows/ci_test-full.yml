@@ -93,6 +93,10 @@ jobs:
         pip install --requirement requirements/devel.txt -U --find-links $PYTORCH_URL
         pip list
 
+    - name: Quick test
+      run: |
+        python -c "import torch; import numpy as np; print(torch.from_numpy(np.random.randn(1)))"
+
     - run: echo "::set-output name=TORCH::$(python -c 'import torch ; print(torch.__version__)' 2>&1)"
       id: info
 
