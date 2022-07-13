@@ -95,8 +95,8 @@ jobs:
         pip list
 
     - name: Update numpy if latest on Windows
-      if: runner.os == 'windows' && matrix.requires == 'latest'
-      run: pip install -U numpy
+      if: runner.os == 'windows' && matrix.requires == 'latest' && matrix.python-version == '3.10'
+      run: pip install -U "numpy<1.23"
 
     - name: Quick test
       run: |
