@@ -96,8 +96,6 @@ jobs:
 
     - name: Quick test
       run: |
-        pip install pipdeptree
-        pipdeptree -fl
         pip show numpy
         python -c "import torch; import numpy as np; print(torch.from_numpy(np.random.randn(1)))"
 
